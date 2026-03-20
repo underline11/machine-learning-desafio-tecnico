@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛒 Lista de Compras</h1>
+        
+        <form id="form-item" class="form-grid">
+            <input type="text" id="nome" placeholder="Item (ex: Arroz)" required>
+            <input type="number" id="qtd" placeholder="Qtd" min="1" required>
+            <input type="number" id="preco" placeholder="Preço Unit. (R$)" step="0.01" required>
+            <button type="submit" id="btn-adicionar">Adicionar</button>
+        </form>
+
+        <table id="tabela-compras">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Qtd</th>
+                    <th>Preço Un.</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="lista-corpo"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3"><strong>Valor Total da Compra:</strong></td>
+                    <td id="valor-total-geral">R$ 0,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
